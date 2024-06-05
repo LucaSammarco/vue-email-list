@@ -29,9 +29,18 @@
     
     <div id="app">
      
+        <ul>
+            <li v-for="(item, index) in emails" :key="index"
+            >
+                {{ item }} 
 
-        <h1>Api Random boolean</h1>
-        <p> Answer: {{ response }} </p>
+                
+            </li>
+
+           
+        </ul>
+
+        </ul>
 
     </div>
 

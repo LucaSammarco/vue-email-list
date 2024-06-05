@@ -30,15 +30,20 @@ createApp({
 
                 console.log(response.data.response)
                 this.response = response.data.response
-                this.generaEmails()
+                // this.emails.push(this.response)
+                
             })
 
         }, 
         
-        generaEmails(){
+        generaEmails()
+        {
+            
             for (let index = 0; index < 10; index++) {
-               let element = this.response;
-                this.emails.push(element)
+            
+            this.getData()
+            
+            this.emails.push(this.response)
                 
             }
             console.log(this.emails)
@@ -48,7 +53,7 @@ createApp({
     },
 
     created() {
-        this.getData()
+        this.generaEmails()
         
     }
    
