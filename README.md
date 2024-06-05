@@ -5,3 +5,8 @@ Attraverso l'apposita API di Boolean, usando axios, con chiamata GET a questo in
 Bonus
 Far comparire gli indirizzi email solamente quando sono stati tutti generati.
 
+        HC 
+
+        Implementare l Api di boolean che genera email.
+        Creare funzione che con un ciclo generi dieci email diverse e inserirle in un array.
+        Stampare in pagina le emails con un ciclo v for

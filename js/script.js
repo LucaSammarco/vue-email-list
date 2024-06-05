@@ -24,13 +24,13 @@ createApp({
 
         getData(){
             
-            axios.get('https://flynn.boolean.careers/exercises/api/random/boolean')
+            axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then((response) => {
                 console.log(this);
 
                 console.log(response.data.response)
                 this.response = response.data.response
-
+                this.generaEmails()
             })
 
         }, 
@@ -48,8 +48,8 @@ createApp({
     },
 
     created() {
-        this.getData(),
-        this.generaEmails()
+        this.getData()
+        
     }
    
     
