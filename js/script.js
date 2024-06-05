@@ -26,33 +26,39 @@ createApp({
             
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then((response) => {
-                console.log(this);
+                // console.log(this);
 
-                console.log(response.data.response)
+                // console.log(response.data.response)
                 this.response = response.data.response
                 // this.emails.push(this.response)
-                
+               
+
             })
 
         }, 
         
         generaEmails()
         {
-            
-            for (let index = 0; index < 10; index++) {
-            
-            this.getData()
-            
-            this.emails.push(this.response)
+          
+
+            while (this.emails.length < 10 && this.response !== "") {
                 
-            }
-            console.log(this.emails)
+                this.getData();
+                this.emails.push(this.response)
+            } 
+                
+                console.log(this.emails)
+           
+                
         }
+       
+            
 
 
     },
 
     created() {
+        this.getData()
         this.generaEmails()
         
     }
